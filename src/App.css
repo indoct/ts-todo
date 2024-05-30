@@ -25,7 +25,7 @@ main {
 }
 
 h1 {
-  font-family: "Outfit", sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 3.2em;
   line-height: 1.1;
   color: #f8f9fa;
@@ -37,7 +37,7 @@ p,
 button,
 div,
 span {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 .input__form {
@@ -82,9 +82,43 @@ span {
   transform: scale(0.8);
   box-shadow: 0 0 5px black;
 }
-/* input,
-button {
-  line-height: 1.5;
-  padding: 10px;
-  font-size: 1.1rem;
-} */
+
+.todo__card {
+  background-color: rgb(224, 215, 79);
+  border: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.233);
+  justify-content: space-between;
+}
+
+.tcbtn__cont {
+  align-items: flex-end;
+}
+
+.tc__buttons {
+  display: flex;
+  column-gap: 10px;
+  list-style: none;
+  margin-bottom: 0.5rem;
+  flex: 100%;
+  box-sizing: border-box;
+}
+
+.tc__buttons svg:hover {
+  cursor: pointer;
+}
+
+.st {
+  text-decoration: line-through;
+}
+
+.delete:hover svg {
+  stroke: red !important;
+}
+
+.edit:hover svg {
+  stroke: rgb(8, 148, 8) !important;
+}
+
+.check:hover svg {
+  stroke: #131313 !important;
+}
