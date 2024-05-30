@@ -1,11 +1,15 @@
-import React from 'react';
-import { Todo } from '../interfaces';
+import { Todo, ListProps } from '../interfaces';
+import { Box, Text } from 'grommet';
+import TodoCard from './TodoCard';
 
-interface ListProps {
-  tasklist: Array<Todo>;
-  setTasklist: React.Dispatch<React.SetStateAction<Array<Todo>>>;
-}
-
-export const TodoList: React.FC = ({ tasklist, setTasklist }: ListProps) => {
-  return <h1>Todo list</h1>;
+const TodoList = ({ tasklist, setTasklist }: ListProps) => {
+  return (
+    <Box direction="row-responsive" gap="medium" align="center">
+      {tasklist.map((task) => (
+        <TodoCard task={task} setTasklist={setTasklist} />
+      ))}
+    </Box>
+  );
 };
+
+export default TodoList;

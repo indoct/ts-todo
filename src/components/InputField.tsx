@@ -1,10 +1,4 @@
-interface InputProps {
-  todo: string;
-  setTodo: React.Dispatch<React.SetStateAction<string>>;
-  // will run when submit button is pressed, returning nothing
-  addToTasklist: (e: React.FormEvent) => void;
-}
-
+import { InputProps } from '../interfaces';
 // same but different way of doing it:
 //const InputField: React.FC<props> = ({ todo, setTodo, addToTasklist }) => {
 

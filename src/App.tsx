@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import InputField from './components/InputField';
 import { Todo } from './interfaces';
-import { TodoList } from './components/TodoList';
+import TodoList from './components/TodoList';
+import { Grommet } from 'grommet';
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>('');
@@ -17,8 +18,6 @@ const App: React.FC = () => {
       setTodo('');
     }
   };
-
-  console.log(tasklist);
 
   return (
     <main>
