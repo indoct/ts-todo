@@ -36,9 +36,18 @@ body,
 p,
 button,
 div,
-span {
+span,
+input,
+textarea {
   font-family: 'Manrope', sans-serif;
 }
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* FC: Task User Input */
 
 .input__form {
   display: flex;
@@ -46,6 +55,7 @@ span {
   position: relative;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .input__box {
@@ -55,7 +65,6 @@ span {
   font-size: 22px;
   border: none;
   transition: 0.2s;
-  /* box-shadow: inset 0 0 5px black; */
 }
 
 .input__submit {
@@ -70,7 +79,6 @@ span {
   background-color: #371c77;
   color: white;
   transition: 0.4s all;
-  /* box-shadow: 0 0 10px black; */
 }
 
 .input__submit:hover {
@@ -83,8 +91,10 @@ span {
   box-shadow: 0 0 5px black;
 }
 
+/* FC: Todo Single Card */
+
 .todo__card {
-  background-color: rgb(224, 215, 79);
+  background-color: rgb(238, 229, 111);
   border: 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.233);
   justify-content: space-between;
@@ -94,17 +104,47 @@ span {
   align-items: flex-end;
 }
 
+.tc__body {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.tc__body[readonly='false'] {
+  background-color: rgb(250, 242, 138);
+}
+
 .tc__buttons {
   display: flex;
   column-gap: 10px;
   list-style: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
   flex: 100%;
   box-sizing: border-box;
 }
 
 .tc__buttons svg:hover {
   cursor: pointer;
+}
+
+.icon-btn {
+  background-color: transparent;
+  border: 0;
+}
+
+.tc__input {
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 1.05rem;
+  line-height: 24px;
+  padding: 10px;
+  border: 0;
+}
+
+.tc__input:read-only {
+  resize: none;
+  background: #eee56f;
 }
 
 .st {
