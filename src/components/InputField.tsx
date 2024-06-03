@@ -1,6 +1,4 @@
 import { InputProps } from '../interfaces';
-// same but different way of doing it:
-//const InputField: React.FC<props> = ({ todo, setTodo, addToTasklist }) => {
 
 const InputField = ({ todo, setTodo, addToTasklist }: InputProps) => {
   return (

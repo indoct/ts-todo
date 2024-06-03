@@ -1,14 +1,8 @@
 import { Box } from 'grommet';
-import { Todo } from '../interfaces';
+import { TodoProps } from '../interfaces';
 import { Trash, Edit, Checkbox, CheckboxSelected } from 'grommet-icons';
 import { useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
-
-interface TodoProps {
-  task: Todo;
-  tasklist: Array<Todo>;
-  setTasklist: React.Dispatch<React.SetStateAction<Array<Todo>>>;
-}
 
 const TodoCard = ({ task, tasklist, setTasklist }: TodoProps) => {
   const [edit, setEdit] = useState<boolean>(false);
@@ -53,14 +47,7 @@ const TodoCard = ({ task, tasklist, setTasklist }: TodoProps) => {
   };
 
   return (
-    <Box
-      direction="column"
-      pad="small"
-      // pad={{ vertical: 'small', horizontal: 'medium' }}
-      className="todo__card"
-      justify="start"
-      fill="horizontal"
-    >
+    <Box direction="column" pad="small" className="todo__card" justify="start" fill="horizontal">
       <form onSubmit={(e) => handleEdit(e, task.id)}>
         <Box className="tcbtn__cont">
           <ul className="tc__buttons">

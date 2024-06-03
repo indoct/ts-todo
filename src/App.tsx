@@ -7,12 +7,10 @@ import { Grommet } from 'grommet';
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>('');
-  // create an array of a type or interface
   const [tasklist, setTasklist] = useState<Array<Todo>>([]);
 
   const addToTasklist = (e: React.FormEvent) => {
     e.preventDefault();
-    // check current todo input isn't empty
     if (todo) {
       setTasklist([...tasklist, { id: Date.now(), body: todo, isDone: false }]);
       setTodo('');
